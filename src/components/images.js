@@ -13,37 +13,33 @@ const Images = () => {
         try {        
             const {data} = await getImages();
 
-            // console.log('the data',data)
             setImagesData(data)
            
             setLoading(!loading)
 
-            // setIsLoading(false)
-
-
         }catch (error){
             setIsError(error.message)
-            // setIsLoading(true)
             console.error(error)
         }
     }
 
 
-    useEffect(() => {getAllImages() 
-        
+    useEffect(() => {
+        getAllImages()
     }, [])
 
-    // console.log('is error', isError)
    
     return (
         
         <>
-            {loading ? null : <h1 className = 'main-title'>Spacestagram</h1>}
+            {loading ? null : <h1 className = 'main-title'>Space<span id = 'end'>stagram</span></h1>}
 
             { 
 
-            //  isError ? <h1>{isError}. <span>Please refresh and try again.</span></h1> : (isLoading ? (<h1>Loading..... one second....</h1>) : ( <ImagesList imagesData = {imagesData}/>))
-             isError ? <h1 className = 'error'>{isError}. <span>Please refresh and try again.</span></h1> : (loading ? (<div className = 'loader'> <h1 className = 'loading'>Loading...</h1> <BarLoader loading = {loading} />  </div>) : ( <div className = 'content'><ImagesList imagesData = {imagesData}/></div>))
+             isError ? <h1 className = 'error'>{isError}. <span>Please refresh and try again.</span></h1> : 
+
+             (loading ? (<div className = 'loader'> <h1 className = 'loading'>Loading...</h1> <BarLoader className = 'load-anm' loading = {loading} color ={'#e92667'}/>  </div>) : 
+             ( <div className = 'content'><ImagesList imagesData = {imagesData}/></div>))
                 
             }
 

@@ -14,10 +14,6 @@ const ImagesList = ({imagesData}) => {
     </>
     )
     
-
-    // console.log('the images data',imagesData)
-
-
     
 }
 
