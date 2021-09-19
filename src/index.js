@@ -5,14 +5,14 @@ import {Images} from './components'
 
 const App = () => {
 
-    const [isLoading, setIsLoading] = useState(true);
+    // const [isLoading, setIsLoading] = useState(true);
 
     return (
         <>
         
-        {isLoading ? null : <h1 className = 'main-title'>Spacestagram</h1>}
+        {/* {isLoading ? null : <h1 className = 'main-title'>Spacestagram</h1>} */}
         
-        <Images setIsLoading = {setIsLoading} />
+        <Images  />
         </>
     )
 }

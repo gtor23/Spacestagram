@@ -4,13 +4,28 @@
     padding: 0;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 #app{
     display: flex;
     flex-direction: column;
+    align-items: center;
     height: 100vh;
     width: 100vw;
 }
 
+.error {
+    height: auto;
+    width: auto;
+    display: flex;
+}
+
+.loading {
+    
+    margin: 0 0 10px 25px;
+}
 
 .loader {
     height: 100%;
@@ -19,4 +34,70 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.content{
+    height: auto;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 15px 0;
+
+}
+
+.card {
+    border: 2px solid black;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+.image-title {
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+}
+
+.info {
+    display: flex;
+}
+
+.under-image{
+    display: flex;
+    margin-top: 5px;
+}
+
+.heart, .liked {
+    font-size: 1.3em;
+    margin-left: 15px;
+}
+
+.heart {
+    color: rgb(243, 200, 208);
+}
+
+.liked {
+    color: red;
+}
+
+.date {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.image-date {
+    display: flex;
+    align-items: center;
+    font-size: 0.8em;
+}
+
+
+
+
+.pointer {
+    cursor: pointer;
 }
